@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/irissilvermoon/isthisirony/issues"
   },
-  "homepage": "https://github.com/irissilvermoon/isthisirony#readme"
+  "homepage": "https://github.com/irissilvermoon/isthisirony#readme",
+  "dependencies": {
+    "react-dom": "^15.5.4"
+  }
 }
