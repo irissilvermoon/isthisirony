@@ -1,0 +1,19 @@
+{
+  "name": "isthisirony",
+  "version": "1.0.0",
+  "description": "Is this Irony?",
+  "main": "index.js",
+  "scripts": {
+    "test": "test_package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irissilvermoon/isthisirony.git"
+  },
+  "author": "Karen Caplan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irissilvermoon/isthisirony/issues"
+  },
+  "homepage": "https://github.com/irissilvermoon/isthisirony#readme"
+}
