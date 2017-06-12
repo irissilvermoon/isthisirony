@@ -7,4 +7,8 @@ class StatementsController < ApplicationController
   def new 
     @statement = Statement.build
   end
+
+  def show
+    
+  end
 end
