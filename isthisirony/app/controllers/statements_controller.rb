@@ -1,11 +1,11 @@
 class StatementsController < ApplicationController
 
   def index
-    @statements = Statement.all 
+   # @statements = Statement.all 
   end
 
-  def new 
-    @statement = Statement.build
+  def create
+    # @statement = Statement.build
   end
 
   def show
