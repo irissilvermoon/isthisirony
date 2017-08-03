@@ -18,9 +18,9 @@ RSpec.describe StatementsController, type: :controller do
   describe "#create" do
     it "should create a statement" do
       expect { 
-        post :create, :statement => "is this statement irony?"
+        post :create, :params => { :statement => { :statement => "is this statement irony?" } }
       }.to change {
-        statements.count
+        Statement.count
       }.by(1)
     end
   end

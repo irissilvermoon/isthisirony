@@ -5,10 +5,20 @@ class StatementsController < ApplicationController
   end
 
   def create
-    # @statement = Statement.build
+    @statement = Statement.create(statement_params)
   end
 
   def show
     
+  end
+
+  private
+
+  def statement_params
+    params.require(:statement).permit(:statement)
+  end
+
+  def find_statement
+    @statement = Statements.find(params[:id])  
   end
 end
