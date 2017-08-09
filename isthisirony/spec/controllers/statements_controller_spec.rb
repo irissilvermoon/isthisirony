@@ -8,14 +8,14 @@ RSpec.describe StatementsController, type: :controller do
   describe "#new" do
     it 'successfully renders new' do
       get :new
-      response.should render_template('new')
+      expect(response).to render_template('new')
     end
   end
 
   describe "#index" do
     it "should succeed" do
       get :index
-      response.should be_success
+      expect(response).to be_success
     end
 
     it "should return a list of statements" do
@@ -36,8 +36,7 @@ RSpec.describe StatementsController, type: :controller do
   describe "#show" do
     it 'should return a statement' do
       get :show, :id => statement.id
-      response.should render_template("show")
-      #pending
+      expect(response).to render_template("show")
     end
   end
 end
