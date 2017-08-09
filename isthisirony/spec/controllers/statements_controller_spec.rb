@@ -17,10 +17,6 @@ RSpec.describe StatementsController, type: :controller do
       get :index
       expect(response).to be_success
     end
-
-    it "should return a list of statements" do
-      #pending
-    end
   end
 
   describe "#create" do
