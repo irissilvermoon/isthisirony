@@ -6,6 +6,10 @@ RSpec.describe StatementsController, type: :controller do
 
 
   describe "#new" do
+    it 'successfully renders new' do
+      get :new
+      response.should render_template('new')
+    end
   end
 
   describe "#index" do
@@ -22,7 +26,7 @@ RSpec.describe StatementsController, type: :controller do
   describe "#create" do
     it "should create a statement" do
       expect { 
-        post :create, :params => { :statement => { :statement => "is this statement irony?" } }
+        post :create, :params => { :statement => { :body => "is this statement irony?" } }
       }.to change {
         Statement.count
       }.by(1)
@@ -31,6 +35,8 @@ RSpec.describe StatementsController, type: :controller do
 
   describe "#show" do
     it 'should return a statement' do
+      get :show, :id => statement.id
+      response.should render_template("show")
       #pending
     end
   end

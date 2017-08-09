@@ -15,7 +15,7 @@ class StatementsController < ApplicationController
   private
 
   def statement_params
-    params.require(:statement).permit(:statement)
+    params.require(:statement).permit(:body)
   end
 
   def find_statement
