@@ -13,6 +13,10 @@ RSpec.describe StatementsController, type: :controller do
       get :index
       response.should be_success
     end
+
+    it "should return a list of statements" do
+      #pending
+    end
   end
 
   describe "#create" do
@@ -26,6 +30,8 @@ RSpec.describe StatementsController, type: :controller do
   end
 
   describe "#show" do
-
+    it 'should return a statement' do
+      #pending
+    end
   end
 end
