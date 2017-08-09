@@ -34,8 +34,8 @@ RSpec.describe StatementsController, type: :controller do
   end
 
   describe "#show" do
-    it 'should return a statement' do
-      get :show, :id => statement.id
+    it 'should render show' do
+      get :show, :params => { :id => statement.id }
       expect(response).to render_template("show")
     end
   end
