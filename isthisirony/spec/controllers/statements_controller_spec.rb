@@ -2,14 +2,10 @@ require 'rails_helper'
 require 'support/factories/statement_factory.rb'
 
 RSpec.describe StatementsController, type: :controller do
-  let!(:statement) { FactoryGirl.create(:statement) }
 
-  describe "#new" do
-    it 'successfully renders new' do
-      get :new
-      expect(response).to render_template('new')
-    end
-  end
+  force_json!
+
+  let!(:statement) { FactoryGirl.create(:statement) }
 
   describe "#index" do
     it "should succeed" do
@@ -29,9 +25,17 @@ RSpec.describe StatementsController, type: :controller do
   end
 
   describe "#show" do
-    it 'should render show' do
-      get :show, :params => { :id => statement.id }
-      expect(response).to render_template("show")
+    it "should succeed" do
+      get :show, :params => { id: statement.id }
+      expect(response.status).to eq(200)
+    end  
+
+    it "should return a statement" do
+      get :show, :params => { id: statement.id }
+
+      json_response = JSON.parse(response.body)
+
+      expect(json_response["body"]).to eq("its like rain when you're already late.")
     end
   end
 end
