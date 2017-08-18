@@ -4,7 +4,6 @@ require 'support/factories/statement_factory.rb'
 RSpec.describe StatementsController, type: :controller do
   let!(:statement) { FactoryGirl.create(:statement) }
 
-
   describe "#new" do
     it 'successfully renders new' do
       get :new
